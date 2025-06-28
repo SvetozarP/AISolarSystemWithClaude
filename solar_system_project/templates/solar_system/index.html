@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+<div id="solar-system-container">
+    <div id="info-panel" class="info-panel hidden">
+        <button id="close-info" class="close-btn">&times;</button>
+        <div id="planet-info">
+            <!-- Planet information will be dynamically loaded here -->
+        </div>
+    </div>
+    
+    <div id="controls-panel" class="controls-panel">
+        <h2>{{ title }}</h2>
+        <p>{{ description }}</p>
+        <div class="control-instructions">
+            <p><strong>Controls:</strong></p>
+            <ul>
+                <li>Mouse drag: Rotate view</li>
+                <li>Mouse wheel: Zoom in/out</li>
+                <li>Click planets: View information</li>
+            </ul>
+        </div>
+        <button id="reset-view" class="control-btn">Reset View</button>
+    </div>
+    
+    <div id="three-canvas-container">
+        <!-- Three.js canvas will be inserted here -->
+    </div>
+    
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-content">
+            <h3>Loading Solar System...</h3>
+            <div class="loading-spinner"></div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{% static 'js/solar_system.js' %}"></script>
+{% endblock %}
