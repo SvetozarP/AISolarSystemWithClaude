@@ -37,6 +37,11 @@ solar_system_project/
         └── index.html
 ```
 
+## Screenshot
+
+![image](https://github.com/user-attachments/assets/985e1398-cecd-436d-a0cf-ce42155e2bd9)
+
+
 ## Setup Instructions
 
 1. **Clone the repository**
